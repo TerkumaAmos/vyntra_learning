@@ -121,6 +121,27 @@ class SignInScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Are you new here?',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      color: AppColors.textgrey,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  SizedBox(width: 3),
+                  Text(
+                    'Sign Up',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      color: AppColors.textOrange,
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
