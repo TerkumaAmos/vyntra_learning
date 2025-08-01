@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vyntra_learn/core/resources/app_colors.dart';
 import 'package:vyntra_learn/ui/widgets/button/custom_button.dart';
+import 'package:vyntra_learn/ui/widgets/decoratedContainer/container.dart';
 import 'package:vyntra_learn/ui/widgets/inputs/auth_text_field.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -26,13 +28,12 @@ class SignInScreen extends StatelessWidget {
                 ),
               ),
               Text(
-                'Log in to discover great deals,connect with campus\nsellers, and shop smarter',
+                'Log in to discover great deals, connect with campus\nsellers, and shop smarter',
                 style: GoogleFonts.poppins(fontSize: 14),
               ),
-              SizedBox(height: 20),
-              AuthTextField(hintText: 'Email'),
-              SizedBox(height: 20),
-
+              const SizedBox(height: 20),
+              const AuthTextField(hintText: 'Email'),
+              const SizedBox(height: 20),
               AuthTextField(
                 hintText: 'Password',
                 suffixIcon: Image.asset(
@@ -42,7 +43,7 @@ class SignInScreen extends StatelessWidget {
                   height: 24,
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 children: [
                   Text(
@@ -52,8 +53,7 @@ class SignInScreen extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  SizedBox(width: 10),
-
+                  const SizedBox(width: 10),
                   Text(
                     'Reset now',
                     style: GoogleFonts.montserrat(
@@ -63,33 +63,60 @@ class SignInScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               CustomButton(
                 text: 'Sign In',
                 color: AppColors.textOrange,
                 onPressed: () {},
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 children: [
                   Expanded(
                     child: Image(
-                      image: AssetImage('assets/png/Line 20.png'),
+                      image: const AssetImage('assets/png/Line 20.png'),
                       color: AppColors.lineColor,
                       fit: BoxFit.contain,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Text(
                     'Or Sign In With',
                     style: GoogleFonts.montserrat(fontWeight: FontWeight.w500),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: Image(
-                      image: AssetImage('assets/png/Line 20.png'),
+                      image: const AssetImage('assets/png/Line 20.png'),
                       color: AppColors.lineColor,
                       fit: BoxFit.fill,
+                    ),
+                  ),
+                ],
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomContainer(
+                    child: SvgPicture.asset(
+                      'assets/svg/facebook.svg',
+                      width: 24,
+                      height: 24,
+                    ),
+                  ),
+                  CustomContainer(
+                    child: SvgPicture.asset(
+                      'assets/svg/google.svg',
+                      width: 24,
+                      height: 24,
+                    ),
+                  ),
+                  CustomContainer(
+                    child: SvgPicture.asset(
+                      'assets/svg/apple.svg',
+                      width: 24,
+                      height: 24,
                     ),
                   ),
                 ],
